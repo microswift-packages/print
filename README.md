@@ -13,7 +13,7 @@ simple integer number print
 `public static func print<T: BinaryFloatingPoint>(_ value: T,
     forceFullPrint: Bool = false,
     terminator: StaticString = "\n")`
-print floating point number (not working yet)
+print floating point number (NOT WORKING YET)
 
 
 Here's a simple hello world example...

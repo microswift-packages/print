@@ -86,39 +86,41 @@ extension Usart {
         }
 
         var i = maxCharacters
-
-        if (value.exponent < maxDigitsBeforePrintExponent
-        && value.exponent > -maxDigitsBeforePrintExponent)
-        || forceFullPrint {
-
-            if value.sign == .minus {
-                print("-")
-                i -= 1
-            }
-
-            func printRemainder(_ v: T) {
-                guard i > 0 else { return } // we are out of space
-    
-                let remainder = v.remainder(dividingBy: 10.0)
-                let quotient = (v - remainder) / 10.0
-
-                if quotient > 0 {
-                    printRemainder(quotient)
-                }
-    
-                i -= 1
-    
-                print(nybble: UInt8(Int(remainder)))
-            }
         
-            printRemainder(value)
+        print("floating point print not yet working")
 
-        } else {
-            i -= print(value.significand, forceFullPrint: true, terminator: "")
-            print("e")
-            i -= 1
-            print(value.exponent)
-        }
+//        if (value.exponent < maxDigitsBeforePrintExponent
+//        && value.exponent > -maxDigitsBeforePrintExponent)
+//        || forceFullPrint {
+//
+//            if value.sign == .minus {
+//                print("-")
+//                i -= 1
+//            }
+//
+//            func printRemainder(_ v: T) {
+//                guard i > 0 else { return } // we are out of space
+//    
+//                let remainder = v.remainder(dividingBy: 10.0)
+//                let quotient = (v - remainder) / 10.0
+//
+//                if quotient > 0 {
+//                    printRemainder(quotient)
+//                }
+//    
+//                i -= 1
+//    
+//                print(nybble: UInt8(Int(remainder)))
+//            }
+//        
+//            printRemainder(value)
+//
+//        } else {
+//            i -= print(value.significand, forceFullPrint: true, terminator: "")
+//            print("e")
+//            i -= 1
+//            print(value.exponent)
+//        }
 
         print(terminator)
 
