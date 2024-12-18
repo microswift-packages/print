@@ -1,4 +1,4 @@
 files:
 - Package.swift
 - serialPrint.swift
-settings: {}
+- module.modulemap
