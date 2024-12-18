@@ -21,7 +21,7 @@ Here's a simple hello world example...
 ```
 import ATmega328P
 import serial
-import print
+import serialPrint
 
 ATmega328P.Usart0.setupSerial()
 

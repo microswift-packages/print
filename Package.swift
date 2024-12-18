@@ -3,20 +3,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "print",
+    name: "serial-print",
     products: [
         .library(
-            name: "print",
-            targets: ["print"]),
+            name: "serialPrint",
+            targets: ["serialPrint"]),
     ],
     dependencies: [
         .package(url: "https://github.com/microswift-packages/serial", from: "1.0.0"),
     ],
     targets: [
         .target(
-            name: "print",
+            name: "serialPrint",
             dependencies: [],
             path: ".",
-            sources: ["print.swift"]),
+            sources: ["serialPrint.swift"]),
     ]
 )
