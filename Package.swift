@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "serial-print",
+    name: "serialPrint",
     products: [
         .library(
             name: "serialPrint",
